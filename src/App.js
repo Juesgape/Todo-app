@@ -4,6 +4,7 @@ import { TodoCounter } from './components/TodoCounter';
 import { TodoSearch } from './components/TodoSearch';
 import {TodoList} from './components/TodoList';
 import { TodoButton } from './components/TodoButton';
+import { TodoItem } from './components/TodoItem';
 
 export const todos = [
   {text: 'Cortar patatas', completed: false},
@@ -19,7 +20,11 @@ function App() {
 
       <TodoSearch />
 
-      <TodoList/>
+      <TodoList>
+        {todos.map(todo => (
+          <TodoItem key={todo.text} text={todo.text} />
+        ))}
+      </TodoList>
 
       <TodoButton/>
 
