@@ -1,12 +1,14 @@
 import React from "react";
-import { todos } from "../App";
-import { TodoItem } from "./TodoItem";
 
-function TodoList() {
+function TodoList(props) {
     return(
-        todos.map(todo => (
-            <TodoItem/>
-        ))
+        <section>
+
+        <ul>
+            {props.children}
+        </ul>
+
+        </section>
     )
 }
 
