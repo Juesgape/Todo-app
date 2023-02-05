@@ -1,0 +1,17 @@
+.search-todo-container {
+    text-align: center;
+    padding: 1rem;
+}
+.search-todo {
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 180px;
+    height: 30px;
+    border: 3px solid red;
+}
+.search-todo:focus {
+    border: 3px solid;
+    outline: none;
+    border-color: aquamarine;
+}
