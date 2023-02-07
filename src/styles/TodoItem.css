@@ -1,15 +1,18 @@
 .todo-items {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 0.1rem 1rem;
 }
 .todo-items div {
-    height: 5rem;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:beige;
+    background-color: #a2a8d3;
     border-radius: 20px;
 }
-
+.todo-items div p {
+    font-weight: bolder;
+    color: #474747;
+}
 .completedTask {
     padding-left: 1rem;
     font-size: 1.2rem;
@@ -22,7 +25,7 @@
 
 .completedTask:hover {
     cursor: pointer;
-    color: rgb(32, 252, 32);
+    color: aqua;
 }
 
 .deleteTask:hover {

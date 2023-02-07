@@ -1,6 +1,14 @@
+:root {
+  --black-color: #113f67;
+  --blue-color: #38598b;
+  --white-purple: #a2a8d3;
+  --grey: #e7eaf6;
+}
+
 body {
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  background-color: var(--black-color);
 }
 
 

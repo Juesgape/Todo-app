@@ -1,17 +1,37 @@
+.search-todo-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .search-todo-container {
     text-align: center;
-    padding: 1rem;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 90;
 }
 .search-todo {
-    text-align: center;
     font-size: 1rem;
     border-radius: 10px;
+    line-height: 45px;
+    padding: 0px 30px 0px 20px;
     width: 180px;
-    height: 30px;
-    border: 3px solid red;
+    height: 40px;
+    border: none;
+    background: none;
+    background-color: #e7eaf6;
+    transition: .3s ease all;
+    border: 2px solid #a2a8d3;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 .search-todo:focus {
-    border: 3px solid;
     outline: none;
-    border-color: aquamarine;
+    border: 2px solid #38598b;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+.search-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 13px;
+    color: #7d8098;
 }
