@@ -17,4 +17,5 @@
 
 .add-button:hover {
     transform: rotate(224deg);
+    cursor: pointer;
 }
