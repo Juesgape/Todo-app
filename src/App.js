@@ -8,15 +8,13 @@ import { TodoItem } from './components/TodoItem';
 
 export const defaultTodos = [
   {text: 'Cortar patatas', completed: false},
-  {text: 'Tomar el curso de intro a React', completed: false},
+  {text: 'Jugar futebol como Messias', completed: false},
   {text: 'Llorar', completed: false},
 ];
 
 function App() {
   const [todos, setTodos] = React.useState(defaultTodos)
   const [searchValue ,setSearchValue] = React.useState('')
-
-  const [filterBySearch, setFilterBySearch] = React.useState('')
 
   const completedTodos = todos.filter(todo => !!todo.completed).length
   const totalTodos = todos.length
@@ -33,8 +31,21 @@ function App() {
 
       return todoText.includes(searchText)
     })
+  }
 
-    console.log(searchedTodos);
+  const completeTodos = (txt) => {
+    const todoIndex = todos.findIndex(todo => todo.text === txt)
+
+    const newTodos = [...todos]
+    newTodos[todoIndex].completed = true
+
+    setTodos(newTodos)
+  }
+
+  const deleteTodos = (txt) => {
+    let newTodos = [...todos]
+    newTodos = newTodos.filter(todo => todo.text !== txt)
+    setTodos(newTodos)
   }
 
   return (
@@ -56,6 +67,8 @@ function App() {
           key={todo.text} 
           text={todo.text} 
           completed={todo.completed}
+          onComplete={() => completeTodos(todo.text)}
+          onDelete={() => deleteTodos(todo.text)}
           />
         ))}
       </TodoList>

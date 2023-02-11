@@ -4,25 +4,20 @@ import {FaRegTimesCircle} from 'react-icons/fa'
 import {FaRegThumbsUp} from 'react-icons/fa'
 
 function TodoItem(props) {
-    const onComplete = () => {
-        alert('Has completado la tarea!')
-    }
-
-    const onDelete = () => {
-        alert('Tarea borrado exitosamente!')
-    }
-
+    
     return(
         <li className="todo-items">
             <div>
-                <FaRegThumbsUp className="completedTask"
-                onClick={onComplete}
+                <FaRegThumbsUp className={props.completed ? 'completedTaskIsTrue' : 'completedTaskIcon'}
+                onClick={props.onComplete}
                 />
 
-                <p>{props.text}</p>
+                <p className={props.completed ? 'completeIsTrue' : ''}>
+                    {props.text} 
+                </p>
 
                 <FaRegTimesCircle className="deleteTask"
-                onClick={onDelete}
+                onClick={props.onDelete}
                 />
             </div>
         </li>
