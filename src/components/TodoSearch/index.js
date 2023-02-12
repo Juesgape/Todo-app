@@ -1,5 +1,5 @@
 import React from "react"
-import '../styles/TodoSearch.css'
+import './TodoSearch.css'
 import {FaSearch} from 'react-icons/fa'
 
 function TodoSearch({ searchValue, setSearchValue }) {

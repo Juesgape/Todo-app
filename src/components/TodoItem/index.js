@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/TodoItem.css'
+import './TodoItem.css'
 import {FaRegTimesCircle} from 'react-icons/fa'
 import {FaRegThumbsUp} from 'react-icons/fa'
 
