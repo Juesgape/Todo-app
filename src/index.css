@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
   background-color: var(--black-color);
+  color: var(--grey);
 }
 
 
