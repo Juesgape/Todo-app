@@ -3,6 +3,12 @@ import './TodoSearch.css'
 import {FaSearch} from 'react-icons/fa'
 import { TodoContext } from "../TodoContext"
 
+const hideTodoSearch = {
+    border: 'none',
+    background: 'none',
+    backgroundColor: 'none',
+}
+
 function TodoSearch() {
     const { searchValue, setSearchValue } = React.useContext(TodoContext)
 
@@ -11,6 +17,7 @@ function TodoSearch() {
     }
 
     return(
+        
         <div className="search-todo-main-container">
             <div className="search-todo-container">
 
