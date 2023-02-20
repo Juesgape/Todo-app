@@ -1,9 +1,9 @@
 import React from "react";
 
 function useLocalStorage(itemName, initialValue) {
-    const [error, setError] = React.useState(false)
-    const [loading, setLoading] =  React.useState(true)
     const [item, setItem] = React.useState(initialValue)
+    const [loading, setLoading] =  React.useState(true)
+    const [error, setError] = React.useState(false)
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -18,27 +18,23 @@ function useLocalStorage(itemName, initialValue) {
                 parsedItem = initialValue
                 } else {
                 parsedItem = JSON.parse(localStorageItem)
+                setItem(parsedItem)
                 }
 
-                setItem(parsedItem)
                 setLoading(false)
 
         } catch(err) {
+            setLoading(false)
             setError(err)
         }
-        }, 1000)
-    }, [itemName, initialValue])
+        }, 2000)
+    }, [initialValue, itemName])
 
     
     //saving todos with local storage
     const saveItem = (newItem) => {
-        try {
-            const stringifiedItem = JSON.stringify(newItem)
-            localStorage.setItem(itemName, stringifiedItem)
-            setItem(newItem)
-        } catch(err) {
-        setError(err)
-        }
+        localStorage.setItem(itemName, JSON.stringify(newItem))
+        setItem(newItem)
     }
     return {
         item,
