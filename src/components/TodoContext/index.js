@@ -1,10 +1,9 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
-import { defaultTodos } from "../../App";
 
 const TodoContext = React.createContext()
 
-function TodoProvider(props) {
+function TodoProvider({children}) {
     const {
         item: todos,
         saveItem: saveTodos,
@@ -31,6 +30,16 @@ function TodoProvider(props) {
             return todoText.includes(searchText)
         })
         }
+
+        const addTodos = (txt) => {
+            const newTodos = [...todos]
+            newTodos.push({
+                text: txt,
+                completed: false
+            })
+        
+            saveTodos(newTodos)
+        }
     
         const completeTodos = (txt) => {
         const todoIndex = todos.findIndex(todo => todo.text === txt)
@@ -56,12 +65,13 @@ function TodoProvider(props) {
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodos,
             completeTodos,
             deleteTodos,
             openModal,
             setOpenModal
         }}>
-            {props.children}
+            {children}
         </TodoContext.Provider>
 
     )
@@ -69,4 +79,4 @@ function TodoProvider(props) {
 
 <TodoContext.Consumer></TodoContext.Consumer>
 
-export {TodoContext, TodoProvider}
+export { TodoContext, TodoProvider }
