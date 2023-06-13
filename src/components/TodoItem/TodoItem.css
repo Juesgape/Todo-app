@@ -1,12 +1,16 @@
 .todo-items {
     padding: 1rem 1rem 0.1rem 1rem;
 }
+.todo-list-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
 .todo-items div {
     height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a2a8d3;
+    background-color: #3500D3;
     border-radius: 20px;
     transition: .3s ease-out;
 }
@@ -21,33 +25,39 @@
 
 .completedTaskIcon {
     padding-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 2rem;
     transition: .3s ease-in-out;
+    color: aqua;
 }
 
 .completedTaskIsTrue {
     padding-left: 1rem;
-    font-size: 1.2rem;
-    color: aqua;
+    font-size: 2rem;
+    color: #36938d;
     transition: .3s ease-in-out;
 }
 
 .completedTaskIcon:hover {
     cursor: pointer;
-    color: aqua;
     transition: .3s ease-in-out;
     transform: rotate(-50deg);
 }
 
+.deleteTask {
+    font-size: 1.8rem;
+    color: rgb(165, 52, 52);
+    transition: .3s ease-in-out;
+}
+
 .deleteTask:hover {
     cursor: pointer;
-    color: rgb(250, 57, 57);
+    color: red;
 }
 
 /* Completed task */
 
 .completeIsTrue {
-    color: blue;
+    color: rgb(154, 154, 161);
     text-decoration: line-through;
     transition: .3s ease-in-out;
 }

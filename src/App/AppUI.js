@@ -7,6 +7,9 @@ import { TodoButton } from '../components/TodoButton';
 import { TodoItem } from '../components/TodoItem';
 import { Modal } from "../Modal";
 import { TodoForm } from "../components/TodoForm";
+import { EmptyScreen } from "../components/EmptyScreen";
+import { LoadingScreen } from "../components/LoadingScreen";
+import { ErrorScreen } from "../components/ErrorScreen";
 
 function AppUI() {
     const {
@@ -27,9 +30,9 @@ function AppUI() {
             <TodoSearch/>
 
             <TodoList>
-                {error && <p>There was an error</p>}
-                {loading && <p>We are working on it, please wait...</p>}
-                {(!loading && !searchedTodos.length) && <p>Create your first TODO!</p>}
+                {error && <ErrorScreen></ErrorScreen>}
+                {loading && <LoadingScreen></LoadingScreen>}
+                {(!loading && !searchedTodos.length) && <EmptyScreen></EmptyScreen>}
                 {searchedTodos.map(todo => (
                     <TodoItem
                         key={todo.text}

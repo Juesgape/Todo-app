@@ -11,7 +11,7 @@ function TodoCounter() {
         <h1 className="TodoCounter">To do list </h1> 
 
         <div className="todo-span-container">
-            <span className="todo-span">You have completed {completedTodos} out of {totalTodos} tasks</span>
+            <span className="todo-span">You have completed <span className="completed-todos">{completedTodos}</span> out of <span className="completed-todos">{totalTodos}</span> tasks</span>
         </div>
 
         </React.Fragment>

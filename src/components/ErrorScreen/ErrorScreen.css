@@ -1,0 +1,10 @@
+.error-screen-container {
+    padding-top: 2rem;
+}
+.img-error-container img {
+    width: 80px;
+}
+.error-message {
+    margin: 2rem;
+    line-height: 1.5;
+}

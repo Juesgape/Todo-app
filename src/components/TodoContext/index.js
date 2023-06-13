@@ -21,7 +21,7 @@ function TodoProvider({children}) {
     
     //searching elements by searching input
         if(searchValue === '') {
-        searchedTodos = todos
+            searchedTodos = todos
         } else {
         searchedTodos = todos.filter(todo => {
             const todoText = todo.text.toLowerCase()
@@ -42,18 +42,18 @@ function TodoProvider({children}) {
         }
     
         const completeTodos = (txt) => {
-        const todoIndex = todos.findIndex(todo => todo.text === txt)
-    
-        const newTodos = [...todos]
-        newTodos[todoIndex].completed = true
-    
-        saveTodos(newTodos)
+            const todoIndex = todos.findIndex(todo => todo.text === txt)
+            
+            const newTodos = [...todos]
+            newTodos[todoIndex].completed = true
+            
+            saveTodos(newTodos)
         }
     
         const deleteTodos = (txt) => {
-        let newTodos = [...todos]
-        newTodos = newTodos.filter(todo => todo.text !== txt)
-        saveTodos(newTodos)
+            let newTodos = [...todos]
+            newTodos = newTodos.filter(todo => todo.text !== txt)
+            saveTodos(newTodos)
         }
 
     return (

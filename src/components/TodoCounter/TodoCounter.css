@@ -10,5 +10,7 @@
 }
 .todo-span {
     font-size: 1.3rem;
-    color: #a2a8d3;
+}
+.completed-todos {
+    color: red;
 }

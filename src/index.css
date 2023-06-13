@@ -1,15 +1,16 @@
 :root {
-  --black-color: #113f67;
-  --blue-color: #38598b;
-  --white-purple: #a2a8d3;
-  --grey: #e7eaf6;
+  --purple-color: #3500D3;
+  --dark: #0B0C10;
+  --cian: #66FCF1;
+  --dark-purple: #E98074;
+  --nice-white: #FEFFFF;
 }
 
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
-  background-color: var(--black-color);
-  color: var(--grey);
+  background-color: var(--dark);
+  color: var(--nice-white);
 }
 
 
